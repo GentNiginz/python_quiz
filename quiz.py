@@ -88,14 +88,17 @@ root.option_add("*Font", font.Font(family="Monospace", size=60))
 title_frame = tk.Frame(root, bg="white")
 title_frame.pack(side="top", pady=10)
 
-score_label = tk.Label(title_frame, text="Score: 0", fg="black", bg="white", anchor="center", font=("Monospace", 40))
-score_label.pack(side="left", padx=50, fill="x")
+score_label = tk.Label(title_frame, text="Score: 0", fg="black", bg="white", anchor="w", font=("Monospace", 40))
+score_label.pack(padx=50, pady=10)
 
 question_label = tk.Label(title_frame, text="", fg="black", bg="white", font=("Monospace", 60))
 question_label.pack(side="left", expand=True, fill="x")
 
-submit_button = tk.Button(title_frame, text="Bestätigen", command=submit, fg="white", bg="#00cc00", padx=60, pady=20, font=("Monospace", 40))
-submit_button.pack(side="right", padx=50)
+spacer_frame = tk.Frame(title_frame, bg="white")
+spacer_frame.pack(side="left", padx=50, fill="x")
+
+submit_button = tk.Button(spacer_frame, text="Bestätigen", command=submit, fg="white", bg="#00cc00", padx=60, pady=20, font=("Monospace", 40))
+submit_button.pack(side="right")
 
 question_frame = tk.Frame(root, bg="white")
 question_frame.pack(pady=40)
