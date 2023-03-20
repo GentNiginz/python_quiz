@@ -77,7 +77,7 @@ def end_quiz():
 # create the GUI
 root = tk.Tk()
 var = tk.IntVar(value=-1)
-root.title("Quiz")
+root.title("Kürzel Quiz v1")
 root.geometry("1000x800")
 
 # configure the style
